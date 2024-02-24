@@ -21,7 +21,7 @@ const Home = () => {
                 {/* Experience */}
               </h1>
               <p>
-                Versatile Software Engineer proficient in Laravel, React, Next.js and more.<br/>
+                with 4+ years' experience. Skilled in PHP, JavaScript, Laravel, React Native, and more.<br />
               </p>
               <div className="btn-bar">
                 <a className="px-btn px-btn-theme" href="#contactus">

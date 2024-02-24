@@ -2,8 +2,11 @@ import SectionTitle from "./SectionTitle";
 
 const skillsData = [
   { id: 1, name: "Laravel", icon: "fab fa-laravel" },
-  { id: 2, name: "React JS", icon: "fab fa-react" },
-  { id: 3, name: "Next js", icon: "fab fa-neos" },
+  { id: 2, name: "PHP", icon: "fab fa-php" },
+  { id: 3, name: "MYSQL", icon: "fas fa-database" },
+  { id: 4, name: "js", icon: "fab fa-js" },
+  { id: 5, name: "React JS", icon: "fab fa-react" },
+  { id: 6, name: "React Native", icon: "fab fa-react" },
 ];
 const experiencesData = [
   {
@@ -23,7 +26,7 @@ const Skill = () => {
               heading={"Skills and  Experience"}
               subHeading={"Experience"}
               text={
-              "Experienced Full-Stack Web Developer with 4+ years' experience. Skilled in JavaScript, Laravel, ReactJS, NextJS and more. Key achievements include developing a unique shipping tracker app, boosting customer attraction. Also created HR and equipment management apps, streamlining work processes, and a finance tracker for better expense control."
+                "Experienced Full-Stack Web Developer with 4+ years' experience. Skilled in HTML, CSS, PHP, JavaScript, Laravel, React Native, and more. Key achievements include developing a unique shipping tracker app, boosting customer attraction. Also created HR and equipment management apps, streamlining work processes, and a finance tracker for better expense control. "
               }
             />
 
