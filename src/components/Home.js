@@ -32,7 +32,7 @@ const Home = () => {
           </div>
           <div className="col-lg-6">
             <div className="home-image">
-              <img src="assets/img/home-banner.png" alt="image" />
+              <img style={{borderRadius: '30px'}} src="assets/img/home-banner.png" alt="image" />
             </div>
           </div>
         </div>
