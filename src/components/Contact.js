@@ -20,12 +20,12 @@ const contactInfo = [
 
 const Contact = () => {
   const [mailData, setMailData] = useState({
-    name: "",
-    email: "",
+    from_name: "",
+    from_email: "",
     message: "",
-    subject: "",
+    reply_to: "",
   });
-  const { name, email, subject, message } = mailData;
+  const { from_name, from_email, reply_to, message } = mailData;
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -35,10 +35,10 @@ const Contact = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (
-      name.length === 0 ||
-      email.length === 0 ||
+      from_name.length === 0 ||
+      from_email.length === 0 ||
       message.length === 0 ||
-      subject.length === 0
+      reply_to.length === 0
     ) {
       setError(true);
     } else {
@@ -58,7 +58,7 @@ const Contact = () => {
             setTimeout(() => {
               setSuccess(false);
             }, 3000);
-            setMailData({ name: "", email: "", message: "", subject: "" });
+            setMailData({ from_name: "", from_email: "", message: "", reply_to: "" });
           },
           (err) => {
             setLoading(false)
@@ -86,15 +86,15 @@ const Contact = () => {
                 <div className="row gx-3 gy-4">
                   <div className="col-md-6">
                     <div className="form-group">
-                      <label className="form-label">First name</label>
+                      <label className="form-label">Your name</label>
                       <input
-                        name="name"
+                        name="from_name"
                         onChange={(e) => onChange(e)}
-                        value={name}
-                        id="name"
+                        value={from_name}
+                        id="from_name"
                         placeholder="Name *"
                         className={`form-control ${
-                          error ? (name.length !== 0 ? "" : "invalid") : ""
+                          error ? (from_name.length !== 0 ? "" : "invalid") : ""
                         }`}
                         type="text"
                       />
@@ -104,13 +104,13 @@ const Contact = () => {
                     <div className="form-group">
                       <label className="form-label">Your Email</label>
                       <input
-                        name="email"
+                        name="from_email"
                         onChange={(e) => onChange(e)}
-                        value={email}
-                        id="email"
+                        value={from_email}
+                        id="from_email"
                         placeholder="Email *"
                         className={`form-control ${
-                          error ? (email.length !== 0 ? "" : "invalid") : ""
+                          error ? (from_email.length !== 0 ? "" : "invalid") : ""
                         }`}
                         type="email"
                       />
@@ -120,13 +120,13 @@ const Contact = () => {
                     <div className="form-group">
                       <label className="form-label">Subject</label>
                       <input
-                        name="subject"
+                        name="reply_to"
                         onChange={(e) => onChange(e)}
-                        value={subject}
-                        id="subject"
+                        value={reply_to}
+                        id="reply_to"
                         placeholder="Subject *"
                         className={`form-control ${
-                          error ? (subject.length !== 0 ? "" : "invalid") : ""
+                          error ? (reply_to.length !== 0 ? "" : "invalid") : ""
                         }`}
                         type="text"
                       />
